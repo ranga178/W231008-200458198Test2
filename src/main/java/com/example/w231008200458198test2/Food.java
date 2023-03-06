@@ -1,10 +1,15 @@
 package com.example.w231008200458198test2;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 public class Food {
     private String name;
     private int calories;
     private double price;
     private int protein;
+
+    private ObservableList<String> food;
 
 
     public Food(String name, int calories, double price, int protein) {
@@ -12,6 +17,7 @@ public class Food {
        setCalories(calories);
        setPrice(price);
        setProtein(protein);
+       this.food = FXCollections.observableArrayList();
     }
 
     public String getName() {
@@ -58,5 +64,13 @@ public class Food {
           this.protein = protein;
         else
             throw new IllegalArgumentException("Protein must be in the range of 0-100");
+    }
+
+    public ObservableList<String> getFood() {
+        return food;
+    }
+
+    public void setActivities(ObservableList<String> food) {
+        this.food = food;
     }
 }
