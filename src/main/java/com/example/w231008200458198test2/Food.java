@@ -70,7 +70,7 @@ public class Food {
         return food;
     }
 
-    public void setActivities(ObservableList<String> food) {
+    public void setFood(ObservableList<String> food) {
         this.food = food;
     }
 }

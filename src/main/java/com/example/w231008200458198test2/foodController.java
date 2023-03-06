@@ -52,15 +52,20 @@ public class foodController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ObservableList<Food> meal = FXCollections.observableArrayList();
-        Meal food = new Meal();
-        meal.add(new Food("Burger",500,5.25,25));
-        meal.add(new Food("Pizza",300,3.50,10));
-        meal.add(new Food("Fries",360,2.75,3));
-        ListView<Food> listView = new ListView<>(meal);
-        totalProtein.setText(Integer.toString(food.getProtein()));
-        totalCalories.setText(Integer.toString(food.getCalories()));
-        totalPrice.setText(Double.toString(food.getTotalPrice()));
+       Food meal = new Food("Pizza",350,2.50,5);
+
+
+       meal.getFood().add("Pizza");
+
+        Food meal02 = new Food("Burger",400,3.50,20);
+        meal.getFood().add("Burger");
+
+        Food meal03 = new Food("Fries",250,2.75,6);
+        meal.getFood().add("Fries");
+        listView.setItems(meal.getFood());
+        totalCalories.setText(Double.toString(meal.getCalories()));
+        totalProtein.setText(Integer.toString(meal.getProtein()));
+        totalPrice.setText(Double.toString(meal.getPrice()));
 
     }
 }
