@@ -26,6 +26,14 @@ public class Meal {
         return total;
     }
 
+    public double getTotalPrice()
+    {
+        double total = 0;
+        for(Food food :cart)
+            total += food.getPrice();
+        return total;
+    }
+
     public String getFoodNames()
     {
         String FoodNames=" ";
