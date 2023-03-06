@@ -34,6 +34,14 @@ public class Meal {
         return total;
     }
 
+    public int getProtein()
+    {
+        int total=0;
+        for(Food food:cart)
+            total += food.getProtein();
+        return total;
+    }
+
     public String getFoodNames()
     {
         String FoodNames=" ";
