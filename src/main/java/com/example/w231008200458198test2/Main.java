@@ -1,18 +1,23 @@
 package com.example.w231008200458198test2;
 
-public class Main {
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+public class Main extends Application {
+    @Override
+    public void start(Stage stage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("food-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("Lunch Time!");
+        stage.setScene(scene);
+        stage.show();
+    }
 
     public static void main(String[] args) {
-        Food Burger = new Food("Burger",500,5.25,25);
-        Food Pizza = new Food("Pizza",300,3.50,10);
-
-        Meal cart = new Meal();
-        cart.addFoodItem(Burger);
-        cart.addFoodItem(Burger);
-        cart.RemoveFoodItem(Burger);
-        cart.addFoodItem(Pizza);
-        System.out.println(cart.getFoodNames());
-        System.out.println(cart);
-
+        launch();
     }
 }

@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.w231008200458198test2/com.example.w231008200458198test2.HelloApplication
+                                com.example.w231008200458198test2/com.example.w231008200458198test2.Main
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
