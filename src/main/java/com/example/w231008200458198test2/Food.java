@@ -5,4 +5,47 @@ public class Food {
     private int calories;
     private double price;
     private int protein;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        if(!name.isBlank())
+          this.name = name;
+        else throw new IllegalArgumentException("Name cannot be blank.");
+    }
+
+    public int getCalories() {
+        return calories;
+    }
+
+    public void setCalories(int calories) {
+        if(calories >= 0 && calories <= 2000)
+         this.calories = calories;
+        else
+            throw new IllegalArgumentException("Must be in the range of 0 to 2000");
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        if(price >=0 && price <= 150)
+          this.price = price;
+        else
+            throw new IllegalArgumentException("Price must be in the range of 0 - 150 dollars");
+    }
+
+    public int getProtein() {
+        return protein;
+    }
+
+    public void setProtein(int protein) {
+        if(protein > 0 && protein <= 100)
+          this.protein = protein;
+        else
+            throw new IllegalArgumentException("Protein must be in the range of 0-100");
+    }
 }

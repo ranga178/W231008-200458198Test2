@@ -4,4 +4,12 @@ import java.util.ArrayList;
 
 public class Meal {
     private ArrayList<Food> cart;
+
+    public ArrayList<Food> getCart() {
+        return cart;
+    }
+
+    public void setCart(ArrayList<Food> cart) {
+        this.cart = cart;
+    }
 }
