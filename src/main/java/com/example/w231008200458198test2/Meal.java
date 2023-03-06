@@ -17,6 +17,15 @@ public class Meal {
     public void RemoveFoodItem(Food food){
         cart.remove(food);
     }
+
+    public int getCalories()
+    {
+        int total = 0;
+        for(Food food :cart)
+            total += food.getCalories();
+        return total;
+    }
+
     public String getFoodNames()
     {
         String FoodNames=" ";
