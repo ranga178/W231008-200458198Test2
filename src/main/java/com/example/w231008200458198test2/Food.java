@@ -18,6 +18,9 @@ public class Food {
         return name;
     }
 
+    public String toString(){
+        return String.format("%s $%.2f",name,price);
+    }
     public void setName(String name) {
         if(!name.isBlank())
           this.name = name;
