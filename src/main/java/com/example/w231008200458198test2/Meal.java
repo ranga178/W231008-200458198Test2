@@ -42,6 +42,13 @@ public class Meal {
         return total;
     }
 
+    public String toString()
+    {
+        return String.format("Meal has  %d items, Total Price: $%.2f ",
+                cart.size(),getTotalPrice());
+
+    }
+
     public String getFoodNames()
     {
         String FoodNames=" ";
