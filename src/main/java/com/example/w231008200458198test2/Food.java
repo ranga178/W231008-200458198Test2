@@ -6,6 +6,14 @@ public class Food {
     private double price;
     private int protein;
 
+
+    public Food(String name, int calories, double price, int protein) {
+       setName(name);
+       setCalories(calories);
+       setPrice(price);
+       setProtein(protein);
+    }
+
     public String getName() {
         return name;
     }
