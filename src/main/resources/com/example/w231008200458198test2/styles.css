@@ -4,10 +4,10 @@
 }
 
 .label {
-    -fx-text-fill:#eBeaf6;
+    -fx-text-fill:black;
     -fx-font-weight:bold;
 }
 .button{
-    -fx-background-radius:25px;
-    -fx-background-color:black ;
+    -fx-background-radius:20px;
+    -fx-background-color:orange ;
 }
